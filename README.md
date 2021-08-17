@@ -1,3 +1,3 @@
-# Improving Image Recognition with Extremely Low FLOPs
+# MicroNet: Improving Image Recognition with Extremely Low FLOPs
 
-The code is comming soon
+The code is coming soon
