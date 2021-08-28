@@ -22,7 +22,7 @@ MicroNet-M0 | 1.0M | 4M  | 46.6 | [model](http://www.svcl.ucsd.edu/projects/micr
 
 ## Evaluate MicroNet on ImageNet
 
-Download the pretrained MicroNet M0-M3 with the link above. The scripts used for evaluation can be found [here](script). For example, if you want to test MicroNet-M3, you can use the following commands.
+Download the pretrained MicroNet M0-M3 with the link above. The scripts used for evaluation can be found [here](script). For example, if you want to test MicroNet-M3, you can use the following command.
 
 ```
 sh scripts/eval_micronet_m3.sh /path/to/imagenet /path/to/output /path/to/pretrained_model
