@@ -410,7 +410,6 @@ class DYMicroBlock(nn.Module):
 class MicroNet(nn.Module):
     def __init__(self, cfg, input_size=224, num_classes=1000, teacher=False):
         super(MicroNet, self).__init__()
-        # setting of inverted residual blocks
 
         mode = cfg.MODEL.MICRONETS.NET_CONFIG
         self.cfgs = microcfg.get_micronet_config(mode)
@@ -521,6 +520,6 @@ class MicroNet(nn.Module):
 
 def micronet(**kwargs):
     """
-    Constructs a MobileNet V2 model
+    Constructs a MicroNet model
     """
     return MicroNet(**kwargs)
