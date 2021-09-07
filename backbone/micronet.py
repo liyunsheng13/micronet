@@ -123,16 +123,7 @@ class StemLayer(nn.Module):
                 MaxGroupPooling(2) if g1*g2==2*oup else nn.ReLU6(inplace=True)
             )
         else: 
-            exp = 6
-            ch_per_group=2
-            hidden_dim = inp*exp //ch_per_group
-            self.stem = nn.Sequential(
-                DepthExpandConv(inp, exp, kernel_size=3, stride=stride),
-                MaxGroupPooling(ch_per_group),
-                nn.Conv2d(hidden_dim, oup, 1, 1, 0, bias=False, groups=1),
-                nn.BatchNorm2d(oup),
-                nn.ReLU6(inplace=True)
-            )
+            raise ValueError('Undefined stem layer')
            
     def forward(self, x):
         out = self.stem(x)    
