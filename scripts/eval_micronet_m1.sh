@@ -2,7 +2,7 @@ export DATA_PATH=$1/imagenet
 export OUTPUT_PATH=$2/micronet-m1-eval
 export WEIGHT_PATH=$3
 
-CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py --arch MicroNet -d $DATA_PATH -c $OUTPUT_PATH1 -j 48 --input-size 224 -b 512 -e --weight $WEIGHT_PATH \
+CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py --arch MicroNet -d $DATA_PATH -c $OUTPUT_PATH -j 48 --input-size 224 -b 512 -e --weight $WEIGHT_PATH \
                                                          MODEL.MICRONETS.BLOCK DYMicroBlock \
                                                          MODEL.MICRONETS.NET_CONFIG msnx_dy6_exp6_6M_221 \
                                                          MODEL.MICRONETS.STEM_CH 6 \
